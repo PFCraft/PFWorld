@@ -1,0 +1,10 @@
+name: PFWorlds
+version: @version@
+main: cn.mgazul.pfworlds.Main
+author: Mgazul
+api-version: 1.15
+softdepend: [PlaceholderAPI]
+
+commands:
+  world:
+
