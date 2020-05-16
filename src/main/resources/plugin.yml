@@ -1,8 +1,7 @@
 name: PFWorlds
-version: @version@
-main: cn.mgazul.pfworlds.Main
+version: 1.2.7-mohist
+main: red.mohist.pfworlds.Main
 author: Mgazul
-api-version: 1.15
 softdepend: [PlaceholderAPI]
 
 commands:
