@@ -2,7 +2,7 @@ name: PFWorlds
 version: @version@
 main: cn.mgazul.pfworlds.Main
 author: Mgazul
-api-version: 1.15
+api-version: 1.16
 softdepend: [PlaceholderAPI]
 
 commands:

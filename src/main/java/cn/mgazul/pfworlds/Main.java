@@ -1,7 +1,6 @@
 package cn.mgazul.pfworlds;
 
 import cn.mgazul.pfworlds.Commands.cmdWorld;
-import cn.mgazul.pfworlds.Listener.BungeeCordEnd;
 import cn.mgazul.pfworlds.Listener.ClickEvent;
 import cn.mgazul.pfworlds.utilities.Config;
 import cn.mgazul.pfworlds.utilities.PFPapiHook;
@@ -65,9 +64,6 @@ public class Main extends JavaPlugin{
     public void registerEvents() {
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new ClickEvent(), this);
-        if (getConfig().getBoolean("bungeecord-end.enable")) {
-            pm.registerEvents(new BungeeCordEnd(), this);
-        }
         this.getCommand("world").setExecutor(new cmdWorld());
     }
     

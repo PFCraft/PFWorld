@@ -17,8 +17,8 @@ targetCompatibility = 1.8
 compileJava.options.encoding = 'UTF-8'
 
 dependencies {
-    compile 'org.spigotmc:spigot-api:1.15.2-R0.1-SNAPSHOT'
-    compile 'com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT'
+    compile 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
+    compile 'com.destroystokyo.paper:paper-api:1.16.1-R0.1-SNAPSHOT'
     compile 'me.clip:placeholderapi:2.10.5'
 }
 
