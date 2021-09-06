@@ -17,8 +17,9 @@ targetCompatibility = 1.8
 compileJava.options.encoding = 'UTF-8'
 
 dependencies {
-    compile files('libs/mohist_srg.jar')
-    compile files('libs/PlaceholderAPI-2.10.6.jar')
+    compile files('libs/mohist-1.12.2-112-server.jar')
+    compile files('libs/PlaceholderAPI-2.10.9.jar')
+    compile files('libs/spigot-1.12.2.jar')
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
