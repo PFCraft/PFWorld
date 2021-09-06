@@ -49,7 +49,7 @@ public class Main extends JavaPlugin{
         this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         this.registerEvents();
         if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
-        	PFPapiHook.hook();
+            new PFPapiHook().register();
         	Bukkit.getConsoleSender().sendMessage("§7[§6"+getDescription().getName()+"§7] §a变量系统已关联PlaceholderAPI.");
         } 
     }
@@ -57,7 +57,7 @@ public class Main extends JavaPlugin{
     @Override
     public void onDisable() {
         if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
-            PFPapiHook.unhook();
+            new PFPapiHook().unregister();
         }
     }
     

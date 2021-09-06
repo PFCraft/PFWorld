@@ -5,27 +5,13 @@ repositories {
     mavenCentral()
     maven { url "https://papermc.io/repo/repository/maven-public" }
     maven { url "https://hub.spigotmc.org/nexus/content/groups/public" }
-    maven { url 'http://repo.extendedclip.com/content/repositories/placeholderapi' }
-    maven { url "http://repo.dmulloy2.net/nexus/repository/public/" }
+    maven { url 'https://repo.extendedclip.com/content/repositories/placeholderapi' }
 }
 
 group = pluginGroup
 version = pluginVersion
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-compileJava.options.encoding = 'UTF-8'
-
 dependencies {
-    compile 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
-    compile 'com.destroystokyo.paper:paper-api:1.16.1-R0.1-SNAPSHOT'
-    compile 'me.clip:placeholderapi:2.10.5'
-}
-
-import org.apache.tools.ant.filters.ReplaceTokens
-
-processResources {
-    from(sourceSets.main.resources.srcDirs) {
-        filter ReplaceTokens, tokens: [version: version]
-    }
+    implementation 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+    implementation 'me.clip:placeholderapi:2.10.10'
 }

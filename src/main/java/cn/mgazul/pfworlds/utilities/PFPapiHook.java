@@ -3,13 +3,14 @@ package cn.mgazul.pfworlds.utilities;
 import cn.mgazul.pfworlds.Commands.cmdWorld;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.clip.placeholderapi.PlaceholderHook;
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
-public class PFPapiHook extends PlaceholderHook{
+public class PFPapiHook extends PlaceholderExpansion {
 
 	private static final String hook_name = "pfw";
 
@@ -41,12 +42,18 @@ public class PFPapiHook extends PlaceholderHook{
 		return null;
 	}
 
-	public static void hook() {
-		PlaceholderAPI.registerPlaceholderHook(hook_name, new PFPapiHook());
+	@Override
+	public String getIdentifier() {
+		return hook_name;
 	}
 
-	public static void unhook() {
-		PlaceholderAPI.unregisterPlaceholderHook(hook_name);
+	@Override public String getAuthor() {
+		return "Mgazul";
+	}
+
+	@Override
+	public String getVersion() {
+		return "0.1";
 	}
 	
     public static String replacepapi(OfflinePlayer player, String x) {
