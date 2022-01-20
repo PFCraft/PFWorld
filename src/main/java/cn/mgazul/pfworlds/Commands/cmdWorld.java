@@ -84,6 +84,10 @@ public class cmdWorld implements CommandExecutor{
             if (args.length == 1 && args[0].equalsIgnoreCase("list") && cs.isOp()) {
                 openWorldGui(p, "§8》 §6世界");
             }
+            //世界列表
+            if (args.length == 1 && args[0].equalsIgnoreCase("addtoconfig") && cs.isOp()) {
+                Config.addWorld(p.getWorld().getName());
+            }
             //创建世界
             if (args.length == 2 && args[0].equalsIgnoreCase("create") && cs.isOp()) {
                 if (Bukkit.getWorld(args[1]) == null) {

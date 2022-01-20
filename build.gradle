@@ -11,7 +11,9 @@ repositories {
 group = pluginGroup
 version = pluginVersion
 
+compileJava.options.encoding = 'UTF-8'
+
 dependencies {
-    implementation 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+    implementation 'org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT'
     implementation 'me.clip:placeholderapi:2.10.10'
 }

@@ -6,13 +6,18 @@ import cn.mgazul.pfworlds.utilities.Config;
 import cn.mgazul.pfworlds.utilities.PFPapiHook;
 import org.bukkit.Bukkit;
 import org.bukkit.WorldType;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.util.ArrayList;
 
-public class Main extends JavaPlugin{
+public class Main extends JavaPlugin  implements Listener {
 
     public static Main instance;
     public static String prefix = "§6世界管理 §8》 §7";
@@ -64,6 +69,7 @@ public class Main extends JavaPlugin{
     public void registerEvents() {
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new ClickEvent(), this);
+        pm.registerEvents(this, this);
         this.getCommand("world").setExecutor(new cmdWorld());
     }
     
@@ -93,5 +99,10 @@ public class Main extends JavaPlugin{
         catch (NumberFormatException e) {
             return false;
         }
+    }
+
+    @EventHandler
+    public void onInventoryClickEvent(InventoryClickEvent event) {
+
     }
 }
